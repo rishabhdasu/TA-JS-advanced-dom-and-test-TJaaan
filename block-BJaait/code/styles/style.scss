@@ -1,0 +1,44 @@
+@import "reset";
+@import "general";
+
+$primary: #3394e4;
+$secondary : white;
+
+.box {
+    cursor: move;
+  }
+  body {
+      background-color: $primary;
+  }
+  h1 {
+      text-align: center;
+      color: $secondary;
+      font-size: 2rem;
+      margin: 2rem auto;
+  }
+
+  input {
+      display: block;
+      width: 100%;
+      padding: 0.8rem 1rem;
+      background-color: rgb(235, 226, 226);
+      border-radius: 0.4rem;
+      outline: none;
+  }
+  .wrapper {
+    width: 60%;
+    margin: 5rem auto;
+      ul {
+          width: 100%;
+          li {
+              background-color: #1c4c74;
+              color: $secondary;
+              margin: 1.5rem auto;
+              padding: 0.8rem;
+              border-radius: 0.4rem;
+              font-size: 1.2rem;
+              text-align: center;
+          }
+      }
+  }
+
