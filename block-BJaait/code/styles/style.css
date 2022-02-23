@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,800");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -108,46 +109,157 @@ a {
   display: none;
 }
 
-.box {
-  cursor: move;
+/* FLEX */
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.justify-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.justify-around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.justify-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.align-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.align-start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.flex-24 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 45%;
+          flex: 0 1 45%;
 }
 
 body {
-  background-color: #3394e4;
+  background-color: #0072FF;
 }
 
 h1 {
   text-align: center;
   color: white;
   font-size: 2rem;
-  margin: 2rem auto;
+  margin: 3rem auto;
 }
 
-input {
-  display: block;
-  width: 100%;
-  padding: 0.8rem 1rem;
-  background-color: #ebe2e2;
-  border-radius: 0.4rem;
-  outline: none;
+.icons, .icons2 {
+  margin: 6rem auto;
 }
 
-.wrapper {
-  width: 60%;
-  margin: 5rem auto;
-}
-
-.wrapper ul {
-  width: 100%;
-}
-
-.wrapper ul li {
-  background-color: #1c4c74;
+.icons span, .icons .span2, .icons .iconsDrop, .icons2 span, .icons2 .span2, .icons2 .iconsDrop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   color: white;
-  margin: 1.5rem auto;
-  padding: 0.8rem;
+  font-size: 2rem;
+  width: 9rem;
+  height: 6rem;
+  border: 1px solid white;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.texts {
+  width: 9rem;
+  margin-top: 1rem;
+}
+
+.texts h2 {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+}
+
+.draggable {
+  will-change: transform;
+  font-weight: 800;
+  list-style-type: none;
+  background-color: #0072FF;
+  color: #0072FF;
+  line-height: 1.5;
+  cursor: move;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: relative;
+}
+
+.draggable:after {
+  content: 'drag me';
+  color: #0072FF;
+  font-weight: 600;
+  font-size: 0.8rem;
+  right: 1rem;
+  top: 0;
+  position: absolute;
+  cursor: pointer;
+  line-height: 5;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  -webkit-transition-timing-function: cubic-bezier(0.48, 0.72, 0.62, 1.5);
+          transition-timing-function: cubic-bezier(0.48, 0.72, 0.62, 1.5);
+  -webkit-transform: translateX(120%);
+          transform: translateX(120%);
+  opacity: 0;
+}
+
+.draggable:hover:after {
+  opacity: 1;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+.over {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
 }
 /*# sourceMappingURL=style.css.map */
