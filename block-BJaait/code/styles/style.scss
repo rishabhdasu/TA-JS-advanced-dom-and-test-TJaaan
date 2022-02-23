@@ -1,0 +1,135 @@
+@import "reset";
+@import "general";
+@import "flex";
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,800');
+$fontFamily: 'Raleway',
+sans-serif;
+
+$primary: #0072FF;
+$secondary : white;
+
+body {
+    background-color: $primary;
+}    
+
+h1 {
+    text-align: center;
+    color: $secondary;
+    font-size: 2rem;
+    margin: 3rem auto;
+}
+
+.icons, .icons2 {
+    margin: 6rem auto;
+    span, .span2, .iconsDrop {
+        display: flex;
+        color: $secondary;
+        font-size: 2rem;
+        width: 9rem;
+        height: 6rem;
+        border: 1px solid $secondary;
+        border-radius: 0.4rem;
+        cursor: pointer;
+    }
+}
+
+.texts {
+    width: 9rem;
+    margin-top: 1rem;
+    h2 {
+        text-align: center;
+        display: flex;
+        color: $secondary;
+    }
+}
+
+// .box {
+//     cursor: move;
+//   }
+//   .wrapper {
+//     width: 60%;
+//     margin: 5rem auto; 
+//     .input-class {
+//         position: relative;
+//         width: 100%;
+//         ::-webkit-input-placeholder {
+//             color: #f1ecec;
+//          }
+//         input {
+//             display: block;
+//             width: 100%;
+//             padding: 1.5rem 0rem 1.5rem 1.5rem;
+//             background-color: transparent;
+//             border: 1px solid white;
+//             border-radius: 0.4rem;
+//             outline: none;
+//             font-size: 1rem;
+//             color: $secondary;
+//         }
+//         span {
+//             position: absolute;
+//             top: 0;
+//             right: 3%;
+//             line-height: 1.8;
+//             font-size: 2.5rem;;
+//             color: $secondary;
+//             cursor: pointer;
+//             transition: all 200ms;
+//             will-change: transform;
+//             &:hover{
+//                 transform: rotate(180deg);
+//               }
+//         }
+//     }
+//       ul {
+//           width: 100%;
+//           li {
+//             background-color: $secondary;
+//             color: $primary;
+//             font-weight: 800;
+//             margin: 1.5rem auto;
+//             padding: 0.8rem 1.2rem;
+//             border-radius: 0.4rem;
+//             font-size: 1.5rem;
+//         }
+          .draggable {
+            will-change: transform;
+            font-weight: 800;
+            list-style-type: none;
+            background-color: $primary;
+            color: $primary;
+            line-height: 1.5;
+            cursor: move;
+            transition: all 200ms;
+            user-select: none;
+            position: relative;
+            &:after {
+                content: 'drag me';
+                color: $primary;
+                font-weight: 600;
+                font-size: 0.8rem;
+                right: 1rem;
+                top: 0;
+                position: absolute;
+                cursor: pointer;
+                line-height: 5;
+                transition: all 200ms;
+                transition-timing-function: cubic-bezier(0.48, 0.72, 0.62, 1.50);
+                transform: translateX(120%);
+                opacity: 0;
+              }
+              &:hover {
+                &:after {
+                  opacity: 1;
+                  transform: translate(0);
+                }
+              }
+          }
+//         }
+//       }
+
+    .over {
+  transform: scale(1.1, 1.1);
+}
+

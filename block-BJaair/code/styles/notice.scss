@@ -1,0 +1,51 @@
+@import "reset";
+@import "general";
+@import "flex";
+
+$primary: #3394e4;
+$secondary : white;
+
+.theme {
+    background-color: $primary;
+    color: $secondary;
+}
+
+header {
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+ul {
+    width: 90%;
+    margin: 3rem auto;
+}
+
+.each-card {
+    padding: 1rem;
+    margin: 0.8rem;
+    border-radius: 0.3rem;
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+form {
+    padding: 1rem;
+    width: 50%;
+    margin: 2rem auto;
+    border: 1px solid $primary;
+    input {
+        display: block;
+        width: 90%;
+        margin: 0.5rem auto;
+        padding: 0.6rem;
+        border: 1px solid gray;
+    }
+    button {
+        display: block;
+        width: 90%;
+        border: none;
+        padding: 0.6rem;
+        margin: 1.5rem auto;
+    }
+}
