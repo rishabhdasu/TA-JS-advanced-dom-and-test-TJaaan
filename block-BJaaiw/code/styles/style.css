@@ -1,8 +1,9 @@
 canvas {
-  width: 50%;
-  height: 70%;
   background: #eee;
-  display: block;
-  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: blue;
 }
 /*# sourceMappingURL=style.css.map */
